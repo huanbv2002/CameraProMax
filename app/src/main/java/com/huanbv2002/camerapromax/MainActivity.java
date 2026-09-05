@@ -31,10 +31,11 @@ import rikka.shizuku.Shizuku;
 public class MainActivity extends AppCompatActivity {
 
     // =========================================================================
-    // CÁC ĐƯỜNG LINK CÓ THỂ THÊM VÀO ĐÂY:
+    // CÁC ĐƯỜNG LINK CỦA DỰ ÁN:
     // =========================================================================
-    public static final String YOUTUBE_TUTORIAL_URL = ""; // Điền link YouTube hướng dẫn vào đây
-    public static final String DONATE_URL = "";           // Điền link Donate / Momo / Ngân hàng vào đây
+    public static final String WEB_OFFICIAL_URL = "https://huanbv2002.github.io/CameraProMax/";
+    public static final String YOUTUBE_TUTORIAL_URL = "https://huanbv2002.github.io/CameraProMax/#shizuku";
+    public static final String DONATE_URL = "https://huanbv2002.github.io/CameraProMax/#config";
     // =========================================================================
 
     private static final int SHIZUKU_REQ_CODE = 1001;
