@@ -21,7 +21,7 @@ import java.nio.charset.StandardCharsets;
 public class UpdateManager {
 
     public static final String GITHUB_OWNER = "huanbv2002";
-    public static final String GITHUB_REPO = "CameraProMax-";
+    public static final String GITHUB_REPO = "CameraProMax";
     public static final String GITHUB_REPO_URL = "https://github.com/" + GITHUB_OWNER + "/" + GITHUB_REPO;
     public static final String GITHUB_PAGES_CONFIG = "https://" + GITHUB_OWNER + ".github.io/" + GITHUB_REPO + "/config.json";
     public static final String GITHUB_API_LATEST = "https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/releases/latest";
@@ -103,7 +103,7 @@ public class UpdateManager {
             URL url = new URL(GITHUB_API_LATEST);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setRequestProperty("User-Agent", "CameraProMax-Android");
+            conn.setRequestProperty("User-Agent", "CameraProMaxAndroid");
             conn.setRequestProperty("Accept", "application/vnd.github.v3+json");
             conn.setConnectTimeout(6000);
             conn.setReadTimeout(6000);

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-green.svg)](https://developer.android.com)
 [![Shizuku](https://img.shields.io/badge/Shizuku-API%20v23-blueviolet.svg)](https://shizuku.rikka.app)
-[![Version](https://img.shields.io/badge/Version-v1.0.0-orange.svg)](https://github.com/huanbv2002/CameraProMax-/releases)
+[![Version](https://img.shields.io/badge/Version-v1.0.0-orange.svg)](https://github.com/huanbv2002/CameraProMax/releases)
 [![Author](https://img.shields.io/badge/Author-Huanbv2002-lightgrey.svg)](https://github.com/huanbv2002)
 
 [Tiếng Việt](#tiếng-việt) | [English](#english)
@@ -51,8 +51,8 @@ Yêu cầu môi trường: Java JDK 17 trở lên, Android SDK 34.
 
 ```bash
 # Clone mã nguồn
-git clone https://github.com/huanbv2002/CameraProMax-.git
-cd CameraProMax-
+git clone https://github.com/huanbv2002/CameraProMax.git
+cd CameraProMax
 
 # Build APK Debug
 ./gradlew assembleDebug
@@ -114,8 +114,8 @@ Camera Pro Max is a free and open-source Android utility designed to customize s
 Prerequisites: Java JDK 17+, Android SDK 34.
 
 ```bash
-git clone https://github.com/huanbv2002/CameraProMax-.git
-cd CameraProMax-
+git clone https://github.com/huanbv2002/CameraProMax.git
+cd CameraProMax
 
 # Build Debug APK
 ./gradlew assembleDebug
