@@ -182,11 +182,14 @@ public class MainActivity extends AppCompatActivity {
             recreate();
         });
 
-        // Xử lý nút Donate
+        // Xử lý nút Donate (Đọc từ config.json hoặc mã nguồn)
         btnDonate.setOnClickListener(v -> {
-            if (DONATE_URL != null && !DONATE_URL.trim().isEmpty()) {
+            String url = prefs.getString(UpdateManager.KEY_REMOTE_DONATE, "").trim();
+            if (url.isEmpty()) url = DONATE_URL != null ? DONATE_URL.trim() : "";
+
+            if (!url.isEmpty()) {
                 try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(DONATE_URL.trim()));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(intent);
                 } catch (Exception e) {
                     Toast.makeText(this, getString(R.string.toast_error_prefix, e.getMessage()), Toast.LENGTH_SHORT).show();
@@ -196,11 +199,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Xử lý nút Hướng dẫn YouTube
+        // Xử lý nút Hướng dẫn YouTube (Đọc từ config.json hoặc mã nguồn)
         btnTutorial.setOnClickListener(v -> {
-            if (YOUTUBE_TUTORIAL_URL != null && !YOUTUBE_TUTORIAL_URL.trim().isEmpty()) {
+            String url = prefs.getString(UpdateManager.KEY_REMOTE_YOUTUBE, "").trim();
+            if (url.isEmpty()) url = YOUTUBE_TUTORIAL_URL != null ? YOUTUBE_TUTORIAL_URL.trim() : "";
+
+            if (!url.isEmpty()) {
                 try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(YOUTUBE_TUTORIAL_URL.trim()));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(intent);
                 } catch (Exception e) {
                     Toast.makeText(this, getString(R.string.toast_error_prefix, e.getMessage()), Toast.LENGTH_SHORT).show();
