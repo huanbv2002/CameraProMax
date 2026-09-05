@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Camera Pro Max - Bo Cong Cu Mo Rong Goc Nhin Man Hinh &amp; FOV Android</title>
-  <meta name="description" content="Ung dung tuy chinh do phan giai man hinh, ti le 21:9 Ultra-Wide va DPI cho Android khong can Root qua Shizuku. Tac gia Huanbv2002." />
+  <title>Camera Pro Max - Mở Rộng Góc Nhìn Màn Hình &amp; FOV Android</title>
+  <meta name="description" content="Ứng dụng tùy chỉnh độ phân giải màn hình, tỉ lệ 21:9 Ultra-Wide và DPI cho Android không cần Root qua Shizuku. Tác giả Huanbv2002." />
   <link rel="icon" type="image/png" href="assets/logo.png" />
   
   <!-- Fonts -->
@@ -37,7 +37,7 @@
   
   <style>
     .glass-card {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(226, 232, 240, 0.8);
     }
@@ -59,21 +59,29 @@
         </div>
       </a>
 
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-        <a href="#features" class="hover:text-blue-600 transition-colors">Tinh Nang</a>
-        <a href="#presets" class="hover:text-blue-600 transition-colors">Ti Le Man Hinh</a>
-        <a href="#shizuku" class="hover:text-blue-600 transition-colors">Cai Dat Shizuku</a>
-        <a href="#download" class="hover:text-blue-600 transition-colors">Tai Ve</a>
-        <a href="#config" class="hover:text-blue-600 transition-colors">Cap Nhat &amp; Huong Dan</a>
+        <a href="#features" class="hover:text-blue-600 transition-colors" data-i18n="nav_features">Tính Năng</a>
+        <a href="#presets" class="hover:text-blue-600 transition-colors" data-i18n="nav_presets">Tỉ Lệ Màn Hình</a>
+        <a href="#shizuku" class="hover:text-blue-600 transition-colors" data-i18n="nav_shizuku">Cài Đặt Shizuku</a>
+        <a href="#download" class="hover:text-blue-600 transition-colors" data-i18n="nav_download">Tải Về</a>
+        <a href="#config" class="hover:text-blue-600 transition-colors" data-i18n="nav_config">Cập Nhật &amp; Hướng Dẫn</a>
       </nav>
 
+      <!-- Actions: Language Switcher & GitHub -->
       <div class="flex items-center gap-3">
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle-btn" onclick="toggleLanguage()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-300 hover:border-blue-400 bg-white text-slate-700 text-xs font-bold transition-all shadow-sm">
+          <svg class="w-3.5 h-3.5 text-blue-600 stroke-current stroke-2 fill-none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="lang-label">EN</span>
+        </button>
+
         <a href="https://github.com/huanbv2002/CameraProMax-" target="_blank" rel="noopener" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold transition-all">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
           <span>GitHub</span>
         </a>
         <a href="#download" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-sm shadow-blue-500/20 transition-all">
-          <span>Tai APK v1.0.0</span>
+          <span data-i18n="top_download_btn">Tải APK v1.0.0</span>
         </a>
       </div>
     </div>
@@ -85,35 +93,35 @@
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
         <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-        Free &amp; Open Source • Non-Root via Shizuku
+        <span data-i18n="hero_badge">Free &amp; Open Source • Non-Root qua Shizuku</span>
       </div>
 
       <!-- Title -->
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-        Mo Rong Tam Nhin Man Hinh &amp; FOV Cho Game Thu Android
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]" data-i18n="hero_title">
+        Mở Rộng Tầm Nhìn Màn Hình &amp; FOV Cho Game Thủ Android
       </h1>
 
       <!-- Subtitle -->
-      <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-        Tuy chinh ti le 21:9 Ultra-Wide, 24:9 Super-Wide va mat do diem anh (DPI) linh hoat chi voi 1 cham. Toi uu hoa goc nhin cho game MOBA, Toc Chien, Lien Quan, PUBG ma khong can Root may.
+      <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed" data-i18n="hero_desc">
+        Tùy chỉnh tỉ lệ 21:9 Ultra-Wide, 24:9 Super-Wide và mật độ điểm ảnh (DPI) linh hoạt chỉ với một cú chạm. Tối ưu hóa góc nhìn toàn cảnh cho game MOBA, Tốc Chiến, Liên Quân, PUBG mà không cần Root máy.
       </p>
 
       <!-- Action Buttons -->
       <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
         <a id="hero-download-btn" href="https://github.com/huanbv2002/CameraProMax-/releases" target="_blank" rel="noopener" class="px-7 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-md shadow-blue-600/25 transition-all flex items-center gap-2.5">
           <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-          <span>Tai Xuong APK (Mien Phi)</span>
+          <span data-i18n="hero_btn_download">Tải Xuống APK (Miễn Phí)</span>
         </a>
         <a href="https://github.com/huanbv2002/CameraProMax-" target="_blank" rel="noopener" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold text-sm shadow-sm transition-all flex items-center gap-2">
           <svg class="w-4 h-4 fill-current text-slate-700" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          <span>Xem Ma Nguon (Star on GitHub)</span>
+          <span data-i18n="hero_btn_github">Xem Mã Nguồn (Star on GitHub)</span>
         </a>
       </div>
 
       <!-- App Mockup Showcase -->
       <div class="mt-14 max-w-sm sm:max-w-md mx-auto relative">
         <div class="rounded-3xl p-3 bg-slate-900/5 shadow-2xl shadow-blue-500/10 border border-slate-200">
-          <img src="assets/screen_main.png" alt="Giao dien Camera Pro Max" class="rounded-2xl w-full object-cover shadow-inner" />
+          <img src="assets/screen_main.png" alt="Giao diện Camera Pro Max" class="rounded-2xl w-full object-cover shadow-inner" />
         </div>
       </div>
     </div>
@@ -123,9 +131,9 @@
   <section id="presets" class="py-16 px-4 sm:px-6 bg-white border-y border-slate-200">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider">Fast Presets</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">Cac Ti Le Khung Hinh Chuan Toi Uu San</h2>
-        <p class="text-slate-600 text-sm mt-3">Tich hop san 4 ti le thiet ke chuyen biet cho tung the loai game va thiet bi.</p>
+        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider" data-i18n="preset_tag">Fast Presets</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2" data-i18n="preset_title">Các Tỉ Lệ Khung Hình Chuẩn Tối Ưu Sẵn</h2>
+        <p class="text-slate-600 text-sm mt-3" data-i18n="preset_subtitle">Tích hợp sẵn 4 tỉ lệ thiết kế chuyên biệt cho từng thể loại game và thiết bị.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -134,7 +142,7 @@
           <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Ultra-Wide</div>
           <div class="text-2xl font-black text-slate-900">21:9</div>
           <div class="text-sm font-semibold text-slate-500 mt-1">2560 x 1080 • 240 DPI</div>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">Mo rong tam nhin ngang cuc dai, giup phat hien dich som hon trong MOBA va game ban sung.</p>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="p1_desc">Mở rộng tầm nhìn ngang cực đại, giúp phát hiện đối thủ sớm hơn trong MOBA và game bắn súng.</p>
         </div>
 
         <!-- Preset 2 -->
@@ -142,15 +150,15 @@
           <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Super-Wide</div>
           <div class="text-2xl font-black text-slate-900">24:9</div>
           <div class="text-sm font-semibold text-slate-500 mt-1">2560 x 960 • 220 DPI</div>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">Goc nhin sieu toan canh ngang cho cac may tinh bang man hinh lon (Lenovo, Xiaomi, Samsung).</p>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="p2_desc">Góc nhìn siêu toàn cảnh ngang cho các máy tính bảng màn hình lớn (Lenovo, Xiaomi, Samsung).</p>
         </div>
 
         <!-- Preset 3 -->
         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Smartphone</div>
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1" data-i18n="p3_title">Điện Thoại</div>
           <div class="text-2xl font-black text-slate-900">19.5:9</div>
           <div class="text-sm font-semibold text-slate-500 mt-1">2560 x 1180 • 260 DPI</div>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">Ti le chuan cua cac dong dien thoai thong minh hien dai, tao cam giac cam nam quen thuoc.</p>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="p3_desc">Tỉ lệ chuẩn của các dòng điện thoại thông minh hiện đại, tạo cảm giác cầm nắm và tương tác quen thuộc.</p>
         </div>
 
         <!-- Preset 4 -->
@@ -158,7 +166,7 @@
           <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">Tablet PC</div>
           <div class="text-2xl font-black text-slate-900">16:10</div>
           <div class="text-sm font-semibold text-slate-500 mt-1">2560 x 1536 • 320 DPI</div>
-          <p class="text-xs text-slate-600 mt-3 leading-relaxed">Ti le chuan cua man hinh may tinh bang, hien thi sac net va toi uu doc sach, lam viec da nhiem.</p>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed" data-i18n="p4_desc">Tỉ lệ chuẩn của màn hình máy tính bảng, hiển thị sắc nét và tối ưu đọc sách, làm việc đa nhiệm.</p>
         </div>
       </div>
     </div>
@@ -168,45 +176,45 @@
   <section id="features" class="py-16 px-4 sm:px-6">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider">Features</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">Tai Sao Nen Chon Camera Pro Max?</h2>
+        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider" data-i18n="feat_tag">Features</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2" data-i18n="feat_title">Tại Sao Nên Chọn Camera Pro Max?</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-5">01</div>
-          <h3 class="text-lg font-bold text-slate-900">Khong Can Root May</h3>
-          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Su dung truc tiep Shizuku API de thuc thi lenh ADB shell an toan, khong lam mat bao hanh hay anh huong den bao mat may.</p>
+          <h3 class="text-lg font-bold text-slate-900" data-i18n="f1_title">Không Cần Root Máy</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed" data-i18n="f1_desc">Sử dụng trực tiếp Shizuku API để thực thi lệnh ADB shell an toàn, không làm mất bảo hành hay ảnh hưởng đến bảo mật máy.</p>
         </div>
 
         <div class="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-5">02</div>
-          <h3 class="text-lg font-bold text-slate-900">Dieu Chinh Pixel-by-Pixel</h3>
-          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Ho tro ca thanh keo Slider truc quan va hop nhap so truc tiep, giup ban chinh xac tung don vi chieu rong, chieu cao va DPI.</p>
+          <h3 class="text-lg font-bold text-slate-900" data-i18n="f2_title">Điều Chỉnh Pixel-by-Pixel</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed" data-i18n="f2_desc">Hỗ trợ cả thanh kéo Slider trực quan và hộp nhập số trực tiếp, giúp bạn căn chỉnh chính xác từng pixel chiều rộng, chiều cao và DPI.</p>
         </div>
 
         <div class="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-5">03</div>
-          <h3 class="text-lg font-bold text-slate-900">Khoi Phuc 1-Cham (Reset)</h3>
-          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Nut Khoi Phuc Goc luon san sang de dua do phan giai tro ve mac dinh cua nha san xuat ngay tuc thi khi choi game xong.</p>
+          <h3 class="text-lg font-bold text-slate-900" data-i18n="f3_title">Khôi Phục 1-Chạm (Reset)</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed" data-i18n="f3_desc">Nút Khôi Phục Gốc luôn sẵn sàng để đưa màn hình trở về độ phân giải mặc định của nhà sản xuất ngay tức thì sau khi chơi game xong.</p>
         </div>
 
         <div class="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-5">04</div>
-          <h3 class="text-lg font-bold text-slate-900">Tu Dong Kiem Tra Cap Nhat</h3>
-          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Tich hop san In-App Update Dialog ket noi GitHub Releases, thong bao khi co phien ban moi voi lua chon Cap nhat ngay hoac De sau.</p>
+          <h3 class="text-lg font-bold text-slate-900" data-i18n="f4_title">Tự Động Kiểm Tra Cập Nhật</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed" data-i18n="f4_desc">Tích hợp sẵn In-App Update Dialog kết nối GitHub Releases, thông báo khi có phiên bản mới với lựa chọn Cập nhật ngay hoặc Để sau.</p>
         </div>
 
         <div class="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-5">05</div>
-          <h3 class="text-lg font-bold text-slate-900">Song Ngu Anh - Viet</h3>
-          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Chuyen doi ngon ngu tuc thi chi voi mot nut bam o thanh tieu de, tu dong luu lai tuy chon cho cac lan su dung sau.</p>
+          <h3 class="text-lg font-bold text-slate-900" data-i18n="f5_title">Song Ngữ Anh - Việt</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed" data-i18n="f5_desc">Chuyển đổi ngôn ngữ tức thì chỉ với một nút bấm ở thanh tiêu đề, tự động lưu lại tùy chọn cho các lần sử dụng sau.</p>
         </div>
 
         <div class="p-7 rounded-2xl bg-white border border-slate-200 shadow-sm">
           <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-5">06</div>
-          <h3 class="text-lg font-bold text-slate-900">100% Khong Quang Cao</h3>
-          <p class="text-slate-600 text-sm mt-2 leading-relaxed">Ung dung hoan toan phi loi nhuan, khong quang cao rac, khong thu thap du lieu nguoi dung, ma nguon mo cong khai tren GitHub.</p>
+          <h3 class="text-lg font-bold text-slate-900" data-i18n="f6_title">100% Không Quảng Cáo</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed" data-i18n="f6_desc">Ứng dụng hoàn toàn phi lợi nhuận, không quảng cáo rác, không thu thập dữ liệu người dùng, mã nguồn mở công khai trên GitHub.</p>
         </div>
       </div>
     </div>
@@ -216,33 +224,33 @@
   <section id="shizuku" class="py-16 px-4 sm:px-6 bg-slate-100 border-t border-slate-200">
     <div class="max-w-4xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider">Shizuku Guide</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">Huong Dan Kich Hoat Shizuku Nhanh</h2>
-        <p class="text-slate-600 text-sm mt-2">Chi can thuc hien mot lan duy nhat qua Wi-Fi hoac may tinh.</p>
+        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider" data-i18n="shizuku_tag">Shizuku Guide</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2" data-i18n="shizuku_title">Hướng Dẫn Kích Hoạt Shizuku Nhanh</h2>
+        <p class="text-slate-600 text-sm mt-2" data-i18n="shizuku_subtitle">Chỉ cần thực hiện một lần duy nhất qua Wi-Fi hoặc máy tính.</p>
       </div>
 
       <div class="space-y-4">
         <div class="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-4">
           <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center shrink-0">1</div>
           <div>
-            <h4 class="font-bold text-slate-900 text-sm">Cai dat app Shizuku</h4>
-            <p class="text-xs text-slate-600 mt-1">Tai app Shizuku mien phi tren Google Play Store hoac GitHub Releases cua Rikka.</p>
+            <h4 class="font-bold text-slate-900 text-sm" data-i18n="s1_title">Cài đặt ứng dụng Shizuku</h4>
+            <p class="text-xs text-slate-600 mt-1" data-i18n="s1_desc">Tải ứng dụng Shizuku miễn phí trên Google Play Store hoặc GitHub Releases của Rikka.</p>
           </div>
         </div>
 
         <div class="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-4">
           <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center shrink-0">2</div>
           <div>
-            <h4 class="font-bold text-slate-900 text-sm">Bat Go Loi Khong Day (Wireless Debugging)</h4>
-            <p class="text-xs text-slate-600 mt-1">Vao Cai dat &gt; Tuy chon nha phat trien &gt; Bat Go loi khong day. Ket noi cung mang Wi-Fi de ghep noi voi Shizuku.</p>
+            <h4 class="font-bold text-slate-900 text-sm" data-i18n="s2_title">Bật Gỡ Lỗi Không Dây (Wireless Debugging)</h4>
+            <p class="text-xs text-slate-600 mt-1" data-i18n="s2_desc">Vào Cài đặt &gt; Tùy chọn nhà phát triển &gt; Bật Gỡ lỗi không dây. Kết nối cùng mạng Wi-Fi để ghép nối với Shizuku.</p>
           </div>
         </div>
 
         <div class="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-4">
           <div class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center shrink-0">3</div>
           <div>
-            <h4 class="font-bold text-slate-900 text-sm">Mo Camera Pro Max &amp; Cap Quyen</h4>
-            <p class="text-xs text-slate-600 mt-1">Khoi chay Camera Pro Max, hop thoai hoi cap quyen Shizuku se hien len, ban chi can nhan "Cho phep" la san sang su dung!</p>
+            <h4 class="font-bold text-slate-900 text-sm" data-i18n="s3_title">Mở Camera Pro Max &amp; Cấp Quyền</h4>
+            <p class="text-xs text-slate-600 mt-1" data-i18n="s3_desc">Khởi chạy Camera Pro Max, hộp thoại hỏi cấp quyền Shizuku sẽ hiện lên, bạn chỉ cần nhấn "Cho phép" là sẵn sàng sử dụng!</p>
           </div>
         </div>
       </div>
@@ -253,31 +261,31 @@
   <section id="config" class="py-16 px-4 sm:px-6 bg-white border-t border-slate-200">
     <div class="max-w-4xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider">Live Config Center</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2">Trung Tam Cap Nhat &amp; Huong Dan</h2>
-        <p class="text-slate-600 text-sm mt-2">Du lieu duoc doc truc tiep tu file cau hinh tren GitHub. Tac gia co the chinh sua bat cu luc nao.</p>
+        <span class="text-xs font-extrabold text-blue-600 uppercase tracking-wider" data-i18n="cfg_tag">Live Config Center</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-2" data-i18n="cfg_title">Trung Tâm Cập Nhật &amp; Hướng Dẫn</h2>
+        <p class="text-slate-600 text-sm mt-2" data-i18n="cfg_subtitle">Dữ liệu được đọc trực tiếp từ file cấu hình trên GitHub. Tác giả có thể chỉnh sửa bất cứ lúc nào.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Live App Version Info -->
         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
           <h3 class="font-bold text-slate-900 text-base mb-4 flex items-center justify-between">
-            <span>Thong Tin Phien Ban</span>
+            <span data-i18n="cfg_card_ver">Thông Tin Phiên Bản</span>
             <span id="cfg-version-badge" class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">v1.0.0</span>
           </h3>
           <div class="space-y-3 text-xs text-slate-600">
             <div class="flex justify-between py-1.5 border-b border-slate-200">
-              <span class="font-medium">Tac gia:</span>
+              <span class="font-medium" data-i18n="cfg_author_lbl">Tác giả:</span>
               <span id="cfg-author" class="font-bold text-slate-800">Huanbv2002</span>
             </div>
             <div class="flex justify-between py-1.5 border-b border-slate-200">
-              <span class="font-medium">Trang thai:</span>
-              <span class="font-bold text-emerald-600">Hoat dong tot</span>
+              <span class="font-medium" data-i18n="cfg_status_lbl">Trạng thái:</span>
+              <span class="font-bold text-emerald-600" data-i18n="cfg_status_val">Hoạt động tốt</span>
             </div>
             <div class="pt-2">
-              <span class="font-medium block mb-1">Nhat ky cap nhat (Changelog):</span>
+              <span class="font-medium block mb-1" data-i18n="cfg_changelog_lbl">Nhật ký cập nhật (Changelog):</span>
               <div id="cfg-changelog" class="p-3 bg-white rounded-lg border border-slate-200 text-slate-700 font-mono text-[11px] whitespace-pre-line leading-relaxed">
-                Dang tai du lieu...
+                Đang tải dữ liệu...
               </div>
             </div>
           </div>
@@ -286,13 +294,13 @@
         <!-- Live Links & Actions -->
         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
           <div>
-            <h3 class="font-bold text-slate-900 text-base mb-4">Lien Ket Nhanh</h3>
+            <h3 class="font-bold text-slate-900 text-base mb-4" data-i18n="cfg_links_title">Liên Kết Nhanh</h3>
             <div class="space-y-3">
               <!-- YouTube Tutorial Link -->
               <a id="cfg-youtube-link" href="#" target="_blank" rel="noopener" class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 hover:border-red-300 hover:shadow-sm transition-all text-xs font-bold text-slate-800">
                 <span class="flex items-center gap-2 text-red-600">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                  <span id="cfg-youtube-text">Xem Video Huong Dan (YouTube)</span>
+                  <span id="cfg-youtube-text">Xem Video Hướng Dẫn (YouTube)</span>
                 </span>
                 <span class="text-slate-400">&rarr;</span>
               </a>
@@ -301,7 +309,7 @@
               <a id="cfg-donate-link" href="#" target="_blank" rel="noopener" class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 hover:border-pink-300 hover:shadow-sm transition-all text-xs font-bold text-slate-800">
                 <span class="flex items-center gap-2 text-rose-500">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                  <span id="cfg-donate-text">Ung Ho Tac Gia (Donate)</span>
+                  <span id="cfg-donate-text">Ủng Hộ Tác Giả (Donate)</span>
                 </span>
                 <span class="text-slate-400">&rarr;</span>
               </a>
@@ -310,7 +318,7 @@
               <a href="https://github.com/huanbv2002/CameraProMax-/releases" target="_blank" rel="noopener" class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-sm transition-all text-xs font-bold text-slate-800">
                 <span class="flex items-center gap-2 text-blue-600">
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  <span>Kho Luu Tru GitHub Releases</span>
+                  <span data-i18n="cfg_releases_lbl">Kho Lưu Trữ GitHub Releases</span>
                 </span>
                 <span class="text-slate-400">&rarr;</span>
               </a>
@@ -318,8 +326,8 @@
           </div>
 
           <!-- Developer Quick Note -->
-          <div class="mt-4 p-3 rounded-lg bg-blue-50/70 border border-blue-200/60 text-[11px] text-blue-900 leading-relaxed">
-            <span class="font-bold">Ghi chu cho Admin (Huanbv2002):</span> Khi muon cap nhat link video YouTube, link Donate hoac so phien ban moi, ban chi can mo va sua file <code>docs/config.json</code> truc tiep tren GitHub ma khong can build lai app!
+          <div class="mt-4 p-3 rounded-lg bg-blue-50/70 border border-blue-200/60 text-[11px] text-blue-900 leading-relaxed" data-i18n="cfg_admin_note">
+            <span class="font-bold">Ghi chú cho Admin (Huanbv2002):</span> Khi muốn cập nhật link video YouTube, link Donate hoặc số phiên bản mới, bạn chỉ cần mở và sửa file <code>docs/config.json</code> trực tiếp trên GitHub mà không cần build lại app!
           </div>
         </div>
       </div>
@@ -329,13 +337,13 @@
   <!-- 7. Download CTA Section -->
   <section id="download" class="py-16 px-4 sm:px-6 bg-blue-600 text-white text-center">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">San Sang Trai Nghiem Camera Pro Max?</h2>
-      <p class="mt-4 text-blue-100 text-sm sm:text-base max-w-xl mx-auto">
-        Tai xuong file APK mien phi va bat dau mo rong goc nhin man hinh ngay hom nay.
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-i18n="cta_title">Sẵn Sàng Trải Nghiệm Camera Pro Max?</h2>
+      <p class="mt-4 text-blue-100 text-sm sm:text-base max-w-xl mx-auto" data-i18n="cta_desc">
+        Tải xuống file APK miễn phí và bắt đầu mở rộng góc nhìn màn hình ngay hôm nay.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a id="footer-download-btn" href="https://github.com/huanbv2002/CameraProMax-/releases" target="_blank" rel="noopener" class="px-8 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-blue-600 font-bold text-sm shadow-lg transition-all">
-          Tai APK Ban Moi Nhat
+        <a id="footer-download-btn" href="https://github.com/huanbv2002/CameraProMax-/releases" target="_blank" rel="noopener" class="px-8 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-blue-600 font-bold text-sm shadow-lg transition-all" data-i18n="cta_btn">
+          Tải APK Bản Mới Nhất
         </a>
       </div>
     </div>
@@ -345,56 +353,229 @@
   <footer class="py-10 px-4 sm:px-6 bg-slate-900 text-slate-400 text-xs">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        <span class="font-bold text-slate-200">Camera Pro Max</span> &bull; Phat trien boi <span class="text-white font-semibold">Huanbv2002</span>.
-        <p class="text-slate-500 mt-1">Phat hanh theo giay phep MIT License. Du an phi loi nhuan cho cong dong.</p>
+        <span class="font-bold text-slate-200">Camera Pro Max</span> &bull; <span data-i18n="footer_dev">Phát triển bởi</span> <span class="text-white font-semibold">Huanbv2002</span>.
+        <p class="text-slate-500 mt-1" data-i18n="footer_license">Phát hành theo giấy phép MIT License. Dự án phi lợi nhuận cho cộng đồng.</p>
       </div>
       <div class="flex items-center gap-5 font-medium">
         <a href="https://github.com/huanbv2002/CameraProMax-" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
         <a href="https://github.com/huanbv2002/CameraProMax-/releases" target="_blank" rel="noopener" class="hover:text-white transition-colors">Releases</a>
-        <a href="https://github.com/huanbv2002/CameraProMax-/issues" target="_blank" rel="noopener" class="hover:text-white transition-colors">Bao Loi (Issues)</a>
+        <a href="https://github.com/huanbv2002/CameraProMax-/issues" target="_blank" rel="noopener" class="hover:text-white transition-colors" data-i18n="footer_issues">Báo Lỗi (Issues)</a>
       </div>
     </div>
   </footer>
 
-  <!-- Dynamic Live Config Loader Script -->
+  <!-- Bilingual Dictionary & Controller Script -->
   <script>
+    const translations = {
+      vi: {
+        nav_features: "Tính Năng",
+        nav_presets: "Tỉ Lệ Màn Hình",
+        nav_shizuku: "Cài Đặt Shizuku",
+        nav_download: "Tải Về",
+        nav_config: "Cập Nhật & Hướng Dẫn",
+        top_download_btn: "Tải APK v1.0.0",
+        hero_badge: "Free & Open Source • Non-Root qua Shizuku",
+        hero_title: "Mở Rộng Tầm Nhìn Màn Hình & FOV Cho Game Thủ Android",
+        hero_desc: "Tùy chỉnh tỉ lệ 21:9 Ultra-Wide, 24:9 Super-Wide và mật độ điểm ảnh (DPI) linh hoạt chỉ với một cú chạm. Tối ưu hóa góc nhìn toàn cảnh cho game MOBA, Tốc Chiến, Liên Quân, PUBG mà không cần Root máy.",
+        hero_btn_download: "Tải Xuống APK (Miễn Phí)",
+        hero_btn_github: "Xem Mã Nguồn (Star on GitHub)",
+        preset_tag: "Fast Presets",
+        preset_title: "Các Tỉ Lệ Khung Hình Chuẩn Tối Ưu Sẵn",
+        preset_subtitle: "Tích hợp sẵn 4 tỉ lệ thiết kế chuyên biệt cho từng thể loại game và thiết bị.",
+        p1_desc: "Mở rộng tầm nhìn ngang cực đại, giúp phát hiện đối thủ sớm hơn trong MOBA và game bắn súng.",
+        p2_desc: "Góc nhìn siêu toàn cảnh ngang cho các máy tính bảng màn hình lớn (Lenovo, Xiaomi, Samsung).",
+        p3_title: "Điện Thoại",
+        p3_desc: "Tỉ lệ chuẩn của các dòng điện thoại thông minh hiện đại, tạo cảm giác cầm nắm và tương tác quen thuộc.",
+        p4_desc: "Tỉ lệ chuẩn của màn hình máy tính bảng, hiển thị sắc nét và tối ưu đọc sách, làm việc đa nhiệm.",
+        feat_tag: "Features",
+        feat_title: "Tại Sao Nên Chọn Camera Pro Max?",
+        f1_title: "Không Cần Root Máy",
+        f1_desc: "Sử dụng trực tiếp Shizuku API để thực thi lệnh ADB shell an toàn, không làm mất bảo hành hay ảnh hưởng đến bảo mật máy.",
+        f2_title: "Điều Chỉnh Pixel-by-Pixel",
+        f2_desc: "Hỗ trợ cả thanh kéo Slider trực quan và hộp nhập số trực tiếp, giúp bạn căn chỉnh chính xác từng pixel chiều rộng, chiều cao và DPI.",
+        f3_title: "Khôi Phục 1-Chạm (Reset)",
+        f3_desc: "Nút Khôi Phục Gốc luôn sẵn sàng để đưa màn hình trở về độ phân giải mặc định của nhà sản xuất ngay tức thì sau khi chơi game xong.",
+        f4_title: "Tự Động Kiểm Tra Cập Nhật",
+        f4_desc: "Tích hợp sẵn In-App Update Dialog kết nối GitHub Releases, thông báo khi có phiên bản mới với lựa chọn Cập nhật ngay hoặc Để sau.",
+        f5_title: "Song Ngữ Anh - Việt",
+        f5_desc: "Chuyển đổi ngôn ngữ tức thì chỉ với một nút bấm ở thanh tiêu đề, tự động lưu lại tùy chọn cho các lần sử dụng sau.",
+        f6_title: "100% Không Quảng Cáo",
+        f6_desc: "Ứng dụng hoàn toàn phi lợi nhuận, không quảng cáo rác, không thu thập dữ liệu người dùng, mã nguồn mở công khai trên GitHub.",
+        shizuku_tag: "Shizuku Guide",
+        shizuku_title: "Hướng Dẫn Kích Hoạt Shizuku Nhanh",
+        shizuku_subtitle: "Chỉ cần thực hiện một lần duy nhất qua Wi-Fi hoặc máy tính.",
+        s1_title: "Cài đặt ứng dụng Shizuku",
+        s1_desc: "Tải ứng dụng Shizuku miễn phí trên Google Play Store hoặc GitHub Releases của Rikka.",
+        s2_title: "Bật Gỡ Lỗi Không Dây (Wireless Debugging)",
+        s2_desc: "Vào Cài đặt > Tùy chọn nhà phát triển > Bật Gỡ lỗi không dây. Kết nối cùng mạng Wi-Fi để ghép nối với Shizuku.",
+        s3_title: "Mở Camera Pro Max & Cấp Quyền",
+        s3_desc: "Khởi chạy Camera Pro Max, hộp thoại hỏi cấp quyền Shizuku sẽ hiện lên, bạn chỉ cần nhấn 'Cho phép' là sẵn sàng sử dụng!",
+        cfg_tag: "Live Config Center",
+        cfg_title: "Trung Tâm Cập Nhật & Hướng Dẫn",
+        cfg_subtitle: "Dữ liệu được đọc trực tiếp từ file cấu hình trên GitHub. Tác giả có thể chỉnh sửa bất cứ lúc nào.",
+        cfg_card_ver: "Thông Tin Phiên Bản",
+        cfg_author_lbl: "Tác giả:",
+        cfg_status_lbl: "Trạng thái:",
+        cfg_status_val: "Hoạt động tốt",
+        cfg_changelog_lbl: "Nhật ký cập nhật (Changelog):",
+        cfg_links_title: "Liên Kết Nhanh",
+        cfg_releases_lbl: "Kho Lưu Trữ GitHub Releases",
+        cfg_admin_note: "<span class='font-bold'>Ghi chú cho Admin (Huanbv2002):</span> Khi muốn cập nhật link video YouTube, link Donate hoặc số phiên bản mới, bạn chỉ cần mở và sửa file <code>docs/config.json</code> trực tiếp trên GitHub mà không cần build lại app!",
+        cta_title: "Sẵn Sàng Trải Nghiệm Camera Pro Max?",
+        cta_desc: "Tải xuống file APK miễn phí và bắt đầu mở rộng góc nhìn màn hình ngay hôm nay.",
+        cta_btn: "Tải APK Bản Mới Nhất",
+        footer_dev: "Phát triển bởi",
+        footer_license: "Phát hành theo giấy phép MIT License. Dự án phi lợi nhuận cho cộng đồng.",
+        footer_issues: "Báo Lỗi (Issues)",
+        yt_available: "Xem Video Hướng Dẫn (YouTube)",
+        yt_upcoming: "Video Hướng Dẫn (Sắp Ra Mắt)",
+        dn_available: "Ủng Hộ Tác Giả (Donate)",
+        dn_upcoming: "Thông Tin Donate (Sắp Cập Nhật)"
+      },
+      en: {
+        nav_features: "Features",
+        nav_presets: "Screen Ratios",
+        nav_shizuku: "Shizuku Setup",
+        nav_download: "Download",
+        nav_config: "Updates & Guides",
+        top_download_btn: "Get APK v1.0.0",
+        hero_badge: "Free & Open Source • Non-Root via Shizuku",
+        hero_title: "Expand Screen Field of View & FOV for Android Gamers",
+        hero_desc: "Customize 21:9 Ultra-Wide, 24:9 Super-Wide, and display density (DPI) with a single tap. Gain full panoramic battlefield awareness in MOBA, Wild Rift, Arena of Valor, and PUBG without Root.",
+        hero_btn_download: "Download APK (Free)",
+        hero_btn_github: "View Source (Star on GitHub)",
+        preset_tag: "Fast Presets",
+        preset_title: "Optimized Pre-configured Aspect Ratios",
+        preset_subtitle: "4 built-in presets tailored for distinct gaming genres and display form factors.",
+        p1_desc: "Maximum horizontal FOV expansion to detect enemy ambushes earlier in MOBA and shooters.",
+        p2_desc: "Panoramic ultra-wide view ideal for large tablet displays (Lenovo, Xiaomi, Samsung).",
+        p3_title: "Smartphone",
+        p3_desc: "Modern standard smartphone aspect ratio for natural holding and intuitive touch control.",
+        p4_desc: "Native tablet aspect ratio with ultra-crisp resolution for reading and multitasking.",
+        feat_tag: "Features",
+        feat_title: "Why Choose Camera Pro Max?",
+        f1_title: "No Root Required",
+        f1_desc: "Directly utilizes Shizuku API to execute ADB shell commands safely without voiding warranty or compromising system security.",
+        f2_title: "Pixel-by-Pixel Precision",
+        f2_desc: "Offers both intuitive seekbars and direct numeric text inputs for exact width, height, and DPI adjustments.",
+        f3_title: "One-Tap Instant Reset",
+        f3_desc: "A dedicated Reset button brings your display back to manufacturer stock defaults immediately after gaming.",
+        f4_title: "Automatic Update Checker",
+        f4_desc: "Integrated In-App Update Dialog connected to GitHub Releases, prompting you with Update Now or Later options.",
+        f5_title: "Dual Language Support",
+        f5_desc: "Instant language switching between English and Vietnamese with persistent preferences.",
+        f6_title: "100% Ad-Free & Lightweight",
+        f6_desc: "Purely non-profit, zero ads, zero tracking, and fully open-source on GitHub.",
+        shizuku_tag: "Shizuku Guide",
+        shizuku_title: "Quick Shizuku Activation Guide",
+        shizuku_subtitle: "Perform this setup once via Wi-Fi or PC ADB.",
+        s1_title: "Install Shizuku App",
+        s1_desc: "Download Shizuku for free on Google Play Store or GitHub Releases by Rikka.",
+        s2_title: "Enable Wireless Debugging",
+        s2_desc: "Go to Settings > Developer Options > Turn on Wireless Debugging. Connect to the same Wi-Fi network to pair.",
+        s3_title: "Open Camera Pro Max & Grant Permission",
+        s3_desc: "Launch Camera Pro Max, tap Allow when the Shizuku permission prompt appears, and you are all set!",
+        cfg_tag: "Live Config Center",
+        cfg_title: "Update & Guide Management Center",
+        cfg_subtitle: "Data is pulled directly from GitHub config file. Authors can update it anytime.",
+        cfg_card_ver: "Version Details",
+        cfg_author_lbl: "Author:",
+        cfg_status_lbl: "Status:",
+        cfg_status_val: "Operational",
+        cfg_changelog_lbl: "Release Notes (Changelog):",
+        cfg_links_title: "Quick Links",
+        cfg_releases_lbl: "GitHub Releases Repository",
+        cfg_admin_note: "<span class='font-bold'>Note for Admin (Huanbv2002):</span> To update the YouTube tutorial link, Donate link, or version number, simply edit <code>docs/config.json</code> directly on GitHub without rebuilding the app!",
+        cta_title: "Ready to Experience Camera Pro Max?",
+        cta_desc: "Download the free APK and start expanding your screen field of view today.",
+        cta_btn: "Download Latest APK",
+        footer_dev: "Developed by",
+        footer_license: "Released under MIT License. Non-profit community project.",
+        footer_issues: "Report Issues",
+        yt_available: "Watch Tutorial Video (YouTube)",
+        yt_upcoming: "Tutorial Video (Coming Soon)",
+        dn_available: "Support the Project (Donate)",
+        dn_upcoming: "Donate Info (Coming Soon)"
+      }
+    };
+
+    let currentLang = localStorage.getItem('camera_pro_max_lang') || 'vi';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('camera_pro_max_lang', lang);
+      document.documentElement.lang = lang;
+      
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.innerHTML = t[key];
+      });
+
+      document.getElementById('lang-label').innerText = lang === 'vi' ? 'EN' : 'VI';
+      updateDynamicLinks();
+    }
+
+    function toggleLanguage() {
+      setLanguage(currentLang === 'vi' ? 'en' : 'vi');
+    }
+
+    let rawConfig = null;
+
     async function loadConfig() {
       try {
         const res = await fetch('config.json?t=' + new Date().getTime());
         if (!res.ok) return;
-        const data = await res.json();
-        
-        if (data.latest_version) {
-          document.getElementById('cfg-version-badge').innerText = 'v' + data.latest_version;
+        rawConfig = await res.json();
+
+        if (rawConfig.latest_version) {
+          document.getElementById('cfg-version-badge').innerText = 'v' + rawConfig.latest_version;
         }
-        if (data.author) {
-          document.getElementById('cfg-author').innerText = data.author;
+        if (rawConfig.author) {
+          document.getElementById('cfg-author').innerText = rawConfig.author;
         }
-        if (data.changelog) {
-          document.getElementById('cfg-changelog').innerText = data.changelog;
+        if (rawConfig.changelog) {
+          document.getElementById('cfg-changelog').innerText = rawConfig.changelog;
         }
-        if (data.apk_download_url) {
-          document.getElementById('hero-download-btn').href = data.apk_download_url;
-          document.getElementById('footer-download-btn').href = data.apk_download_url;
+        if (rawConfig.apk_download_url) {
+          document.getElementById('hero-download-btn').href = rawConfig.apk_download_url;
+          document.getElementById('footer-download-btn').href = rawConfig.apk_download_url;
         }
-        if (data.youtube_tutorial_url && data.youtube_tutorial_url.trim() !== '') {
-          document.getElementById('cfg-youtube-link').href = data.youtube_tutorial_url;
-        } else {
-          document.getElementById('cfg-youtube-text').innerText = 'Video Huong Dan (Sap Ra Mat)';
-          document.getElementById('cfg-youtube-link').removeAttribute('href');
-          document.getElementById('cfg-youtube-link').classList.add('opacity-75', 'cursor-not-allowed');
-        }
-        if (data.donate_url && data.donate_url.trim() !== '') {
-          document.getElementById('cfg-donate-link').href = data.donate_url;
-        } else {
-          document.getElementById('cfg-donate-text').innerText = 'Thong Tin Donate (Sap Cap Nhat)';
-          document.getElementById('cfg-donate-link').removeAttribute('href');
-          document.getElementById('cfg-donate-link').classList.add('opacity-75', 'cursor-not-allowed');
-        }
+        updateDynamicLinks();
       } catch (err) {
-        console.log('Using default static fallback');
+        console.log('Using default config fallback');
       }
     }
+
+    function updateDynamicLinks() {
+      const t = translations[currentLang];
+      const ytLink = document.getElementById('cfg-youtube-link');
+      const ytText = document.getElementById('cfg-youtube-text');
+      const dnLink = document.getElementById('cfg-donate-link');
+      const dnText = document.getElementById('cfg-donate-text');
+
+      if (rawConfig && rawConfig.youtube_tutorial_url && rawConfig.youtube_tutorial_url.trim() !== '') {
+        ytLink.href = rawConfig.youtube_tutorial_url;
+        ytText.innerText = t.yt_available;
+        ytLink.classList.remove('opacity-75', 'cursor-not-allowed');
+      } else {
+        ytText.innerText = t.yt_upcoming;
+        ytLink.removeAttribute('href');
+        ytLink.classList.add('opacity-75', 'cursor-not-allowed');
+      }
+
+      if (rawConfig && rawConfig.donate_url && rawConfig.donate_url.trim() !== '') {
+        dnLink.href = rawConfig.donate_url;
+        dnText.innerText = t.dn_available;
+        dnLink.classList.remove('opacity-75', 'cursor-not-allowed');
+      } else {
+        dnText.innerText = t.dn_upcoming;
+        dnLink.removeAttribute('href');
+        dnLink.classList.add('opacity-75', 'cursor-not-allowed');
+      }
+    }
+
+    setLanguage(currentLang);
     loadConfig();
   </script>
 </body>

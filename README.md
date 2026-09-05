@@ -3,94 +3,134 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%208.0%2B-green.svg)](https://developer.android.com)
 [![Shizuku](https://img.shields.io/badge/Shizuku-API%20v23-blueviolet.svg)](https://shizuku.rikka.app)
-[![Version](https://img.shields.io/badge/Version-v1.0.0-orange.svg)](https://github.com/huanbv2002/Camera-Pro-Max/releases)
+[![Version](https://img.shields.io/badge/Version-v1.0.0-orange.svg)](https://github.com/huanbv2002/CameraProMax-/releases)
 [![Author](https://img.shields.io/badge/Author-Huanbv2002-lightgrey.svg)](https://github.com/huanbv2002)
 
-Camera Pro Max la ung dung ma nguon mo (Free & Open Source) giup tuy chinh do phan giai man hinh, ti le khung hinh (Aspect Ratio) va mat do diem anh (DPI) tren dien thoai va may tinh bang Android ma khong can Root, thong qua he thong Shizuku API.
+[Tiếng Việt](#tiếng-việt) | [English](#english)
 
 ---
 
-## 1. Tinh Nang Chinh (Key Features)
+## Tiếng Việt
 
-- Khong can Root: Su dung Shizuku de thuc thi lenh ADB shell an toan, khong lam mat bao hanh thiet bi.
-- Ti Le Khung Hinh Tinh San (Fast Presets):
-  - Ultra-Wide 21:9 (2560 x 1080): Mo rong tam nhin toi da cho cac tua game MOBA, FPS (Lien Quan Mobile, Toc Chien, PUBG Mobile).
-  - Super-Wide 24:9 (2560 x 960): Goc nhin sieu rong ngang.
-  - Smartphone 19.5:9 (2560 x 1180): Ti le dien thoai tieu chuan.
-  - Tablet PC 16:10 (2560 x 1536): Ti le goc toi uu cho may tinh bang.
-- Tuy Chinh Tu Do (Custom Parameters):
-  - Thanh keo Slider va o nhap so truc tiep cho phep dieu chinh tung pixel chieu rong (Width), chieu cao (Height) va mat do (DPI).
-- Khoi Phuc Goc 1-Cham:
-  - Nut Reset All giup dua man hinh tro ve do phan giai mac dinh cua nha san xuat ngay lap tuc.
-- Tu Dong Kiem Tra Cap Nhat (In-App GitHub Update Checker):
-  - Tu dong thong bao khi co ban cap nhat moi tu GitHub Releases.
-  - Nguoi dung co the chon Cap nhat ngay hoac De sau.
-- Ho Tro Song Ngu:
-  - Chuyen doi nhanh giua Tieng Viet va Tieng Anh.
-- Giao Dien Hien Dai, Thuan Khiet:
-  - Thiet ke Minimalist trang thanh lich, bo goc hien dai, icon vector Flaticon sac net.
+Camera Pro Max là ứng dụng mã nguồn mở (Free & Open Source) giúp tùy chỉnh độ phân giải màn hình, tỉ lệ khung hình (Aspect Ratio) và mật độ điểm ảnh (DPI) trên điện thoại và máy tính bảng Android mà không cần Root máy, thông qua hệ thống Shizuku API.
 
----
+### 1. Tính Năng Nổi Bật
 
-## 2. Yeu Cau He Thong (System Requirements)
+- Không cần Root: Sử dụng quyền ADB shell an toàn qua Shizuku API, không làm mất bảo hành và không cần can thiệp hệ thống sâu.
+- 4 Tỉ Lệ Khung Hình Chuẩn Tối Ưu Sẵn (Fast Presets):
+  - Ultra-Wide 21:9 (2560 x 1080 - 240 DPI): Mở rộng góc nhìn ngang tối đa cho game thủ MOBA, Tốc Chiến, Liên Quân Mobile, PUBG.
+  - Super-Wide 24:9 (2560 x 960 - 220 DPI): Góc nhìn toàn cảnh siêu rộng cho máy tính bảng.
+  - Điện Thoại 19.5:9 (2560 x 1180 - 260 DPI): Tỉ lệ chuẩn smartphone hiện đại.
+  - Tablet PC 16:10 (2560 x 1536 - 320 DPI): Tỉ lệ màn hình gốc sắc nét cho máy tính bảng.
+- Tùy Chỉnh Tự Do Pixel-by-Pixel:
+  - Thanh kéo Slider và hộp nhập số trực tiếp giúp điều chỉnh chính xác từng đơn vị Width, Height và DPI.
+- Khôi Phục 1-Chạm (Reset):
+  - Nút Khôi Phục Gốc giúp đưa màn hình về độ phân giải mặc định của nhà sản xuất ngay lập tức sau khi chơi game.
+- Tự Động Kiểm Tra Cập Nhật (In-App Auto Update):
+  - Tích hợp hộp thoại thông báo cập nhật tự động khi có phiên bản mới trên GitHub Releases, cho phép cập nhật ngay hoặc để sau.
+- Hỗ Trợ Song Ngữ:
+  - Chuyển đổi nhanh giữa Tiếng Việt và Tiếng Anh trực tiếp trên thanh tiêu đề.
+- Thiết Kế Tối Giản (Clean Minimalist):
+  - Giao diện trắng hiện đại, không quảng cáo rác, không thu thập dữ liệu người dùng.
 
-- Android 8.0 (API level 26) tro len.
-- Da cai dat ung dung Shizuku va kich hoat thanh cong qua Wireless Debugging (Go loi khong day) hoac cap quyen qua ADB may tinh mot lan.
+### 2. Yêu Cầu Hệ Thống
 
----
+- Android 8.0 (API level 26) trở lên.
+- Đã cài đặt ứng dụng Shizuku và khởi chạy thành công qua Gỡ lỗi Wi-Fi (Wireless Debugging) hoặc máy tính.
 
-## 3. Huong Dan Cai Dat & Su Dung
+### 3. Hướng Dẫn Cài Đặt & Kích Hoạt Shizuku
 
-### Buoc 1: Kich hoat Shizuku
-1. Cai dat ung dung Shizuku tu Google Play hoac GitHub Releases.
-2. Vao Cai dat nha phat trien (Developer Options) tren thiet bi, bat Go loi Wi-Fi (Wireless Debugging).
-3. Mo app Shizuku va chon Ghap noi / Khoi chay. Khi Shizuku bao Running la thanh cong.
+1. Cài đặt ứng dụng Shizuku từ Google Play Store hoặc GitHub của Rikka.
+2. Vào Cài đặt > Tùy chọn nhà phát triển (Developer Options) > Bật Gỡ lỗi Wi-Fi (Wireless Debugging).
+3. Mở app Shizuku, chọn Ghép nối và Khởi chạy.
+4. Mở app Camera Pro Max, cấp quyền Shizuku khi có hộp thoại yêu cầu là có thể bắt đầu sử dụng.
 
-### Buoc 2: Su dung Camera Pro Max
-1. Cai dat file APK Camera Pro Max tu muc Releases.
-2. Mo app va cap quyen Shizuku khi co thong bao yeu cau.
-3. Chon mot trong cac Che Do Nhanh (Ultra-Wide, Super-Wide...) hoac tu dieu chinh thanh keo theo y muon.
-4. Nhan "Ap Dung Thay Doi" de ap dung ngay lap tuc.
-5. De quay ve man hinh goc, chi can nhan "Khoi Phuc".
+### 4. Hướng Dẫn Build Từ Mã Nguồn
 
----
+Yêu cầu môi trường: Java JDK 17 trở lên, Android SDK 34.
 
-## 4. Huong Dan Build Tu Ma Nguon (Build From Source)
-
-### Yeu cau moi truong:
-- Java JDK 17 tro len.
-- Android SDK Build-Tools 34.0.0.
-
-### Lenh build APK:
 ```bash
-# Clone repository
-git clone https://github.com/huanbv2002/Camera-Pro-Max.git
-cd Camera-Pro-Max
+# Clone mã nguồn
+git clone https://github.com/huanbv2002/CameraProMax-.git
+cd CameraProMax-
 
-# Build ban Debug APK
+# Build APK Debug
 ./gradlew assembleDebug
 
-# Hoac tren Windows Command Prompt / PowerShell:
+# Hoặc trên Windows PowerShell:
 gradlew.bat assembleDebug
 ```
-File APK dau ra:
-`app/build/outputs/apk/debug/app-debug.apk`
+File APK sau khi build: `app/build/outputs/apk/debug/app-debug.apk`
+
+### 5. Cơ Chế Cập Nhật & Quản Lý Link
+
+Ứng dụng đọc cấu hình trực tiếp từ GitHub Pages: `docs/config.json`.  
+Khi cần cập nhật link YouTube hướng dẫn, link Donate hoặc số phiên bản mới, tác giả chỉ cần sửa file `docs/config.json` trên GitHub mà không cần build lại app.
+
+### 6. Bản Quyền & Giấy Phép
+
+Phát hành theo giấy phép MIT License.  
+Tác giả: Huanbv2002 (https://github.com/huanbv2002)
 
 ---
 
-## 5. Co Che Tu Dong Cap Nhat (Auto-Update Mechanism)
+## English
 
-Ung dung tich hop san `UpdateManager` ket noi voi GitHub REST API:
-- Endpoint: `https://api.github.com/repos/huanbv2002/Camera-Pro-Max/releases/latest`
-- Khi ban tao mot Release moi tren GitHub (vi du tag `v1.0.1`) va dinh kem file APK vao phan Assets, ung dung tren may nguoi dung se tu dong phat hien va hien thi Dialog thong bao cap nhat.
-- Nguoi dung cung co the cham truc tiep vao so phien ban tren thanh tieu de de kiem tra cap nhat thu cong.
+Camera Pro Max is a free and open-source Android utility designed to customize screen resolution, aspect ratio, and display density (DPI) without requiring Root access, powered by the Shizuku API.
 
----
+### 1. Key Features
 
-## 6. Ban Quyen & Giay Phep (License)
+- Non-Root Access: Uses ADB shell commands safely through Shizuku API without voiding device warranty.
+- 4 Optimized Fast Presets:
+  - Ultra-Wide 21:9 (2560 x 1080 - 240 DPI): Maximum horizontal field of view for MOBA and FPS mobile games.
+  - Super-Wide 24:9 (2560 x 960 - 220 DPI): Panoramic ultra-wide screen mode for tablets.
+  - Smartphone 19.5:9 (2560 x 1180 - 260 DPI): Modern standard smartphone aspect ratio.
+  - Tablet PC 16:10 (2560 x 1536 - 320 DPI): Native crisp tablet display ratio.
+- Pixel-by-Pixel Customization:
+  - Responsive sliders and numeric inputs for precise width, height, and DPI adjustments.
+- One-Click Restore:
+  - Instantly resets the display to manufacturer default settings after gaming sessions.
+- In-App Auto-Update System:
+  - Automatically notifies users when a newer release is published on GitHub, with Update Now and Later options.
+- Dual Language Support:
+  - Seamlessly toggle between Vietnamese and English.
+- Clean & Ad-Free Interface:
+  - Elegant white aesthetic, zero ads, zero tracking, lightweight performance.
 
-Du an duoc phat hanh theo giay phep MIT License.
-Ban co quyen su dung, chinh sua va phan phoi hoan toan mien phi.
+### 2. System Requirements
 
-Tac gia: Huanbv2002  
-GitHub: https://github.com/huanbv2002
+- Android 8.0 (API level 26) or higher.
+- Shizuku app installed and running via Wireless Debugging or computer ADB.
+
+### 3. Shizuku Setup & Usage Guide
+
+1. Install Shizuku from Google Play Store or Rikka GitHub Releases.
+2. Go to Settings > Developer Options > Enable Wireless Debugging.
+3. Open Shizuku, pair and start the service.
+4. Open Camera Pro Max, grant Shizuku permission when prompted, and start customizing your display.
+
+### 4. Build From Source
+
+Prerequisites: Java JDK 17+, Android SDK 34.
+
+```bash
+git clone https://github.com/huanbv2002/CameraProMax-.git
+cd CameraProMax-
+
+# Build Debug APK
+./gradlew assembleDebug
+
+# Windows Command:
+gradlew.bat assembleDebug
+```
+Output APK file: `app/build/outputs/apk/debug/app-debug.apk`
+
+### 5. Dynamic Configuration & Auto-Update
+
+The application reads configuration from GitHub Pages: `docs/config.json`.  
+Authors can update the YouTube tutorial URL, Donate URL, and version number by editing `docs/config.json` directly on GitHub without rebuilding the app.
+
+### 6. License
+
+Released under the MIT License.  
+Author: Huanbv2002 (https://github.com/huanbv2002)
