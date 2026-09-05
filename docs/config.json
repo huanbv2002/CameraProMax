@@ -4,7 +4,8 @@
   "apk_download_url": "https://github.com/huanbv2002/CameraProMax/releases/download/v1.0.0/CameraProMax-v1.0.0-release.apk",
   "releases_page": "https://github.com/huanbv2002/CameraProMax/releases",
   "youtube_tutorial_url": "https://huanbv2002.github.io/CameraProMax/#shizuku",
-  "donate_url": "https://huanbv2002.github.io/CameraProMax/#config",
+  "donate_url": "https://huanbv2002.github.io/CameraProMax/",
   "author": "Huanbv2002",
-  "changelog": "- Bản phát hành chính thức v1.0.0\\n- Hỗ trợ màn hình dọc & chống tràn chữ\\n- 4 tỉ lệ nhanh: 21:9 Ultra-Wide, 24:9 Super-Wide, Smartphone, Tablet PC\\n- Tích hợp hệ thống kiểm tra cập nhật từ GitHub\\n- Song ngữ Anh - Việt hoàn chỉnh"
+  "changelog": "- Bản phát hành chính thức v1.0.0\\n- Hỗ trợ màn hình dọc & chống tràn chữ\\n- 4 tỉ lệ nhanh: 21:9 Ultra-Wide, 24:9 Super-Wide, Smartphone, Tablet PC\\n- Tích hợp hệ thống kiểm tra cập nhật từ GitHub\\n- Song ngữ Anh - Việt hoàn chỉnh",
+  "apk_debug_download_url": "https://github.com/huanbv2002/CameraProMax/releases/download/v1.0.0/CameraProMax-v1.0.0-debug.apk"
 }
