@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Minimalist Clean White Theme Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="bg_light">#F8FAFC</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="border_light">#E2E8F0</color>
+    <color name="border_subtle">#F1F5F9</color>
+    
+    <!-- Primary Brand Colors -->
+    <color name="primary_blue">#2563EB</color>
+    <color name="primary_blue_light">#EFF6FF</color>
+    <color name="primary_blue_dark">#1D4ED8</color>
+    
+    <!-- Accent & Status Colors -->
+    <color name="accent_indigo">#4F46E5</color>
+    <color name="status_green">#10B981</color>
+    <color name="status_green_bg">#ECFDF5</color>
+    <color name="status_red">#EF4444</color>
+    <color name="status_red_bg">#FEF2F2</color>
+    <color name="status_amber">#F59E0B</color>
+    <color name="status_amber_bg">#FFFBEB</color>
+
+    <!-- Typography Colors -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="text_hint">#CBD5E1</color>
+</resources>

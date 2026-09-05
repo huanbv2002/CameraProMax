@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center">
+
+    <!-- Center Animated Container -->
+    <LinearLayout
+        android:id="@+id/layout_splash_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Splash Image (Logo + Title + Subtitle) -->
+        <ImageView
+            android:id="@+id/img_splash_logo"
+            android:layout_width="310dp"
+            android:layout_height="300dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_splash_logo" />
+
+        <!-- Sleek Indeterminate Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progress_splash"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="130dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="24dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primary_blue"
+            android:progressTint="@color/primary_blue" />
+
+        <!-- Loading status -->
+        <TextView
+            android:id="@+id/tv_splash_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.03"
+            android:text="@string/splash_status_init"
+            android:textColor="#475569"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Open Source Tagline -->
+    <TextView
+        android:id="@+id/tv_splash_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.04"
+        android:text="@string/open_source_badge"
+        android:textColor="#94A3B8"
+        android:textSize="12sp" />
+
+</RelativeLayout>

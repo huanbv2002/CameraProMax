@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base Application Theme: Clean White Minimalist -->
+    <style name="Theme.CameraProMax" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/accent_indigo</item>
+        <item name="colorSecondaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <item name="android:colorBackground">@color/bg_light</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <item name="android:statusBarColor">@color/surface_white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">@color/surface_white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+    <!-- Splash Theme -->
+    <style name="Theme.CameraProMax.Splash" parent="Theme.CameraProMax">
+        <item name="android:windowBackground">@color/surface_white</item>
+    </style>
+</resources>

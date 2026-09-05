@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Camera Pro Max</string>
+    <string name="app_tagline">By Huanbv2002</string>
+    <string name="app_subtitle">Screen Aspect Ratio &amp; Game FOV Optimizer</string>
+    <string name="open_source_badge">Camera Pro Max • By Huanbv2002 • Free Open Source</string>
+    <string name="app_version">v1.0.0</string>
+    <string name="lang_toggle">EN</string>
+
+    <!-- Shizuku Strings -->
+    <string name="shizuku_ready">Shizuku: Connected &amp; Ready to Use</string>
+    <string name="shizuku_not_running">Shizuku: Not running. Please open Shizuku!</string>
+    <string name="shizuku_not_granted">Shizuku: Permission needed. Tap to grant!</string>
+    <string name="shizuku_btn_open">OPEN SHIZUKU</string>
+    <string name="shizuku_btn_request">GRANT PERMISSION</string>
+
+    <!-- Display Info -->
+    <string name="header_current_display">CURRENT DISPLAY</string>
+    <string name="res_label">Resolution</string>
+    <string name="dpi_label">Density</string>
+
+    <!-- Presets -->
+    <string name="header_fast_mode">FAST PRESETS</string>
+    <string name="header_fast_mode_sub">Optimized aspect ratios for gaming</string>
+    <string name="preset_ultra_wide">ULTRA-WIDE</string>
+    <string name="preset_super_wide">SUPER-WIDE</string>
+    <string name="preset_phone">SMARTPHONE</string>
+    <string name="preset_tablet_pc">TABLET PC</string>
+
+    <!-- Sliders -->
+    <string name="header_custom_params">CUSTOM PARAMETERS</string>
+    <string name="width_label">Width</string>
+    <string name="height_label">Height</string>
+    <string name="density_label">DPI</string>
+
+    <!-- Actions -->
+    <string name="btn_apply_changes">Apply Changes</string>
+    <string name="btn_restore_default">Reset Default</string>
+    <string name="btn_applying">Applying...</string>
+
+    <!-- Bottom Links -->
+    <string name="btn_donate">Donate</string>
+    <string name="btn_tutorial">User Guide / Tutorial</string>
+
+    <!-- Toasts & Dialogs -->
+    <string name="toast_preset_selected">Selected preset: %s</string>
+    <string name="toast_apply_success">Applied successfully: %s</string>
+    <string name="toast_reset_success">Screen reset to hardware default!</string>
+    <string name="toast_error_prefix">Error: %s</string>
+    <string name="toast_input_invalid">Invalid input values, please check again!</string>
+    <string name="toast_res_too_small">Resolution too small! Please enter at least 400px.</string>
+    <string name="toast_donate_placeholder">Thank you! Donation links will be updated soon.</string>
+    <string name="toast_tutorial_placeholder">YouTube tutorial video will be updated soon!</string>
+    <string name="toast_shizuku_required">Please open Shizuku app and start the service!</string>
+    <string name="splash_status_init">Initializing system...</string>
+    <string name="splash_status_ready">Ready to optimize screen view...</string>
+    <!-- GitHub & Update Strings -->
+    <string name="btn_github">GitHub</string>
+    <string name="update_dialog_title">New Version Available</string>
+    <string name="update_dialog_msg_version">A new update (%1$s) is available.\nCurrent version: %2$s\n\nWould you like to update now?</string>
+    <string name="update_dialog_changelog">Release notes:</string>
+    <string name="update_btn_now">Update Now</string>
+    <string name="update_btn_later">Later</string>
+    <string name="update_toast_latest">You are using the latest version!</string>
+    <string name="update_toast_checking">Checking for updates...</string>
+    <string name="update_toast_error">Unable to check for updates at this time.</string>
+</resources>
